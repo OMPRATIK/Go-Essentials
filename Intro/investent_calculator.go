@@ -4,12 +4,22 @@ package main
 import (
 	"fmt"
 	"math"
+
+	"example.com/investment_calculator/profitcalculator"
 )
 
 const inflationRate = 2.5
 // main function is executed by Go
 func main() {
 	getInvestment()
+	ebt, profit, ratio, err := profitcalculator.CalculateProfit()
+	if err != nil {
+		fmt.Println(err)
+		panic("oops")
+	} else {
+		fmt.Println(ebt, profit, ratio)
+	}
+
 	// profitcalculator.CalculateProfit()
 	// profitcalculator.Add()
 	
