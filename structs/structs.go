@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"example.com/structs/user"
 )
@@ -18,20 +17,24 @@ func main() {
 	var appUser *user.User
 	
 	//  alternate struct literal notation
+	/*
 	appUser = &user.User{
-		FirstName: firstName,
-		LastName: lastName,
-		Birthdate: birthdate,
-		CreatedAt: time.Now(),
+		firstName,
+		lastName,
+		birthdate,
+		time.Now(),
 	}
-
+*/
 	// valid struct -> all the fields will be set to their respective null value
 	appUser = &user.User{}
 
 	// other fields will be set to it's null value!
+	/*
 	appUser = &user.User{
 		FirstName: "Pratik",
 	}
+	*/
+	
 /*
 	appUser = User{
 		firstName: firstName,
@@ -52,6 +55,12 @@ func main() {
 	appUser.ClearuserName()
 	appUser.OutputUserDetail()
 	// fmt.Println(firstName, lastName, birthdate)
+	
+		admin := user.NewAdmin("abc@gmail.com", "Pratik1244");
+	
+		admin.OutputUserDetail()
+		admin.ClearuserName()
+		admin.OutputUserDetail()
 }
 
 
