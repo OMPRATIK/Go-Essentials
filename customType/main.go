@@ -80,12 +80,12 @@ func printSomething(value interface {}) {
 		fmt.Println(typedValFloat + 2.3)
 	}
 	/*
-	// typed swtich
+	// type swtich
 	switch value.(type) {
 	case int:
 		fmt.Println("Integer: ", value)
 	case string:
-		fmt.Println("String: ", value)
+		fmt.Println("String: ", value) 
 	case float64:
 		fmt.Println("Float 64", value)
 	}
@@ -114,7 +114,7 @@ func saveData(data saver) error {
 // input -----------------------------------
 func getNoteData() (string, string) {
 	title := getUserInput("Note title: ")
-	content :=getUserInput("Note content: ")
+	content := getUserInput("Note content: ")
 	
 	return title, content
 }

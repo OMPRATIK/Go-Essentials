@@ -8,9 +8,9 @@ import (
 )
 /*
 type Note struct {
-	Title     string // not accessible outside the package
-	Content   string // same as above
-	CreatedAt time.Time
+	title     string // not accessible outside the package
+	content   string // same as above
+	createdAt time.Time
 }
 */
 type Todo struct {	
