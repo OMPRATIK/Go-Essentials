@@ -1,7 +1,10 @@
-package main
+package mapPackage
 
 import "fmt"
 
+func Eat() {
+	fmt.Println("eat")
+}
 func main() {
 	websites := map[string]string{
 		"Google":              "google.com",

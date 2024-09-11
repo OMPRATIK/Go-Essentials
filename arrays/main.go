@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	mapPackage "example.com/arrays/maps"
+)
 
 
 type floatMap map[string]float64
@@ -31,7 +35,7 @@ func main() {
 	courseRatings["typescript"] = 9
 	courseRatings["javascript"] = 4
 	fmt.Println(courseRatings)
-
+	mapPackage.Eat()
 	// for range loop
 
 	for index, value := range userNames {
