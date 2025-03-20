@@ -66,7 +66,7 @@ func main() {
 	printSomething("apple")
 }
 
-func printSomething(value interface {}) {
+func printSomething(value any) {
 	typedVal, ok := value.(int)
 	
 	if ok {
@@ -127,7 +127,6 @@ func getUserInput(prompt string) string {
 	*/
 	reader := bufio.NewReader(os.Stdin)
 	text, err := reader.ReadString('\n')
-
 	if err != nil {
 		return ""
 	}

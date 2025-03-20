@@ -10,6 +10,7 @@ func main() {
 	
 	anotherSum := variadicSum(1, 2, 3, 4)
 	newSum := variadicSum(argSlice...) // unpack slice into comma separated values
+
 	fmt.Println(anotherSum, newSum)
 }
 
@@ -22,7 +23,7 @@ func sliceSum(numbers []int) int {
 }
 
 // variadic function takes comma separated args and packs them into a slice
-func variadicSum(numbers ...int) int {
+func variadicSum(numbers... int) int {
 	sum := 0
 	for _, val := range numbers {
 		sum += val
