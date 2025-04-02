@@ -32,29 +32,16 @@ func main() {
 	// for idx := range 4 {
 	// 	<- dones[idx]
 	// }
-	// done := make(chan bool)
 
-	// go greet("Hello 1", done);
-	// go greet("Hello 2", done);
-	// go slowGreet("slow Hello 1", done)
-	// go greet("Hello 3", done);
+	done := make(chan bool)
 
-	// for doneChan := range done {
-	// 	fmt.Println(doneChan)
-	// }
-	done := make(chan string)
+	go greet("Hello 1", done);
+	go greet("Hello 2", done);
+	go slowGreet("slow Hello 1", done)
+	go greet("Hello 3", done);
 
-	go func() {
-		done <- "st"
-	}()
-	go func() {
-		fmt.Printf(<- done)
-		}()
-	go func() {
-		fmt.Printf(<- done)
-	}()
-
-	for range done {
-		// fmt.Println(doneChan)
+	for doneChan := range done {
+		fmt.Println(doneChan)
 	}
+	
 }
